@@ -11,18 +11,18 @@ Steps to build this docker container.
 To build your image from the command line:
 * Can do this on [Google shell](https://shell.cloud.google.com) - docker is installed and available
 
-\```bash
+```bash
 docker build -t fastqc .
-\```
+```
 
 To test this tool from the command line 
 
 Set up an environment variable capturing your current command line:
-\```bash
+```bash
 PWD=$(pwd)
-\```
+```
 
 Then mount and use your current directory and call the tool now encapsulated within the environment.
-\```bash
+```bash
 docker run -it -v $PWD:$PWD -w $PWD fastqc fastqc -h
-\```
+```
